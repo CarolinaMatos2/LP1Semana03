@@ -17,7 +17,12 @@ namespace ArrayMult
             float a14 = float.Parse(args[3]);
             float b1 = float.Parse(args[4]);
             float b2 = float.Parse(args[5]);
-            
+
+            float resultado1 = a11 * b1 + a12 * b2;
+            float resultado2 = a21 * b1 + a22 * b2;
+            Console.WriteLine(resultado1);
+            Console.WriteLine(resultado2);
+
         }
     }
 }
