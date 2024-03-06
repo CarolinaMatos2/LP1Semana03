@@ -15,7 +15,7 @@ namespace ChangeString
             string resuldado = "";
             foreach (char c in inst)
             {
-                resuldado = (c == substituir) ? 'X' : c;
+                resuldado += (c == substituir) ? 'X' : c;
             }
 
             Console.WriteLine($"Será impresso: {resultado}");
