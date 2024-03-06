@@ -1,30 +1,30 @@
 ﻿using System;
-
-[Flags]
-enum WoWRoles
-{
-    WaterBreathing = 1
-    Stealth = 2
-    AutoHeal = 4
-    DoubleJump = 8
-}
-
 namespace HeroPerks
 {
-    class Program
+    [Flags]
+    enum Perks
     {
-        static void Main(string[] args)
+        WaterBreathing = 1 << 0,
+        Stealth = 1 << 1,
+        AutoHeal = 1 << 2,
+        DoubleJump = 1 << 3
+    }
+    {
+        class Program
         {
-            if(args.Length != 1)
+            static void Main(string[] args)
             {
-                Console.WriteLine("");
-                return;
-            }
-            WoWRoles roles = 0;
+                if(args.Length != 1)
+                {
+                    Console.WriteLine("");
+                    return;
+                }
+                WoWRoles roles = 0;
 
-            foreach (char l in args[0])
-            {
+                foreach (char l in args[0])
+                {
                 
+                }
             }
         }
     }
