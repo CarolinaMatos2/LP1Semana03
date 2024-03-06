@@ -9,16 +9,16 @@ namespace ChangeString
             Console.Write("String: ");
             string inst = Console.ReadLine();
 
-            Console.Write("Caráter: ")
-            string substituir = Console.ReadLine();
+            Console.Write("Caráter: ");
+            char substituir = Console.ReadLine();
 
             string resuldado = "";
-            foreach (char c in b)
+            foreach (char c in inst)
             {
                 resuldado = (c == substituir) ? 'X' : c;
             }
 
-            Console.WriteLine($"Será impresso: {resultado}")
+            Console.WriteLine($"Será impresso: {resultado}");
         }
     }
 }
