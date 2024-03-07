@@ -11,11 +11,11 @@ namespace RPS
                 Console.WriteLine("Escolham pedra, papel ou tesoura.");
                 return;
             }
-            string player1Choice = args[0];
-            string player2Choice = args[1];
-            int result = RockPaperScissors(player1Choice, player2Choice);
+            GameItem player1Choice = Enum.Parse(args[0]);
+            GameItem player2Choice = Enum.Parse(args[1]);
 
-            switch(result)
+            GameStatus result = RockPaperScissors(player1Choice, player2Choice)
+            switch (result)
             {
                 case 0:
                     Console.WriteLine("It's a draw!");
@@ -33,17 +33,17 @@ namespace RPS
         {
             if (player1 == player2)
             {
-                return 0; // Draw
+                return GameStatus.Draw; // Draw
             }
-            if (((player1 == "Rock") && (player2 == "Scissors")) ||
-                ((player1 == "Scissors") && (player2 == "Paper")) ||
-                ((player1 == "Paper") && (player2 == "Rock")))
+            if (((player1 == GameItem.Rock) && (player2 == GameItem.Scissors)) ||
+                ((player1 == GameItem.Scissors) && (player2 == GameItem.Paper)) ||
+                ((player1 == GameItem.Paper) && (player2 == GameItem.Rock)))
             {
-                return 1; // Player 1 wins
+                return GameStatus.Player1Wins; // Player 1 wins
             }
             else
             {
-                return 2; // Player 2 wins
+                return GameStatus.Player2Wins; // Player 2 wins
             }
         }
     }
