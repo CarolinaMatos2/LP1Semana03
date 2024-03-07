@@ -10,6 +10,7 @@ namespace RPS
 
             string player1Choice = args[0];
             string player1Choice = args[1];
+            int result = RockPaperScissors(player1Choice, player2Choice);
 
             {
                 case 0:
