@@ -8,7 +8,7 @@ namespace PowTwoUntil
         {
             for (int i = 1; i <= (1 << 5); i = i << 1)
             {
-                Console.Write.Line(i);
+                Console.WriteLine(i);
             }
         }
         static void Main(string[] args)
