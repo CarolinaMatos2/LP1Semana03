@@ -9,7 +9,8 @@ namespace RPS
             if(args.Lenght < 2)
 
             string player1Choice = args[0];
-            
+            string player1Choice = args[1];
+
             {
                 case 0:
                     Console.WriteLine("It's a draw!");
