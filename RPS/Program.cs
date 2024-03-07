@@ -6,11 +6,14 @@ namespace RPS
     {
         private static void Main(string[] args)
         {
-            if(args.Lenght < 2)
-
+            if(args.Length < 2)
+        {
             string player1Choice = args[0];
             string player1Choice = args[1];
             int result = RockPaperScissors(player1Choice, player2Choice);
+        }
+
+            switch(result)
 
             {
                 case 0:
