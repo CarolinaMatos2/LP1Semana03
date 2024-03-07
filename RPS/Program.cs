@@ -7,14 +7,15 @@ namespace RPS
         private static void Main(string[] args)
         {
             if(args.Length < 2)
-        {
+            {   
+                Console.WriteLine("Escolham pedra, papel ou tesoura.");
+                return;
+            }
             string player1Choice = args[0];
-            string player1Choice = args[1];
+            string player2Choice = args[1];
             int result = RockPaperScissors(player1Choice, player2Choice);
-        }
 
             switch(result)
-
             {
                 case 0:
                     Console.WriteLine("It's a draw!");
