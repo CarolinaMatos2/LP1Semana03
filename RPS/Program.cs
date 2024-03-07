@@ -7,6 +7,8 @@ namespace RPS
         private static void Main(string[] args)
         {
             if(args.Lenght < 2)
+
+            string player1Choice = args[0];
             
             {
                 case 0:
